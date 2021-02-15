@@ -26,50 +26,63 @@ import {
 
 const App: () => React$Node = () => {
   return (
-    <>
       <SafeAreaView style={styles.page}>
+
         <View style = {styles.sectionHeader}>
           <Text style={styles.sectionTitle}>
             All Survey
           </Text>
-
         </View>
 
-        <View style={styles.bodyContent}>
-        <Text>body content</Text>
-        </View>
+        <ScrollView style ={styles.bodyScroll}>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+        <Text style= {styles.highlight}>body content</Text>
+
+        </ScrollView>
       </SafeAreaView>
-    </>
   );
 };
 
 const styles = StyleSheet.create({
   view: {
-    flex:1
-  },
-  scrollView: {
-    backgroundColor: Colors.white
+    flex:1,
   },
   page: {
     flex: 1,
-    backgroundColor: '#191970'
+    backgroundColor: '#191970',
   },
   body:{
     flex:1,
-    backgroundColor:Colors.white
+    backgroundColor:Colors.white,
   },
   bodyContent:{
+    flex:10,
+    backgroundColor: Colors.white,
+    
+  },
+  bodyScroll:{
     flex:1,
-    backgroundColor: Colors.white
+    backgroundColor: `#d2691e`,
   },
   sectionHeader: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    flex:1,
+    marginTop: 30,
+    paddingHorizontal: 14,
   },
   sectionTitle: {
     fontSize: 32,
     fontWeight: '600',
-    color: Colors.white
+    color: Colors.white,
   },
   sectionDescription: {
     marginTop: 8,
@@ -79,6 +92,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+    fontSize: 40,
   },
 });
 

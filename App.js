@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -24,6 +16,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import SurveyItem from './components/SurveyItem';
+
 const App: () => React$Node = () => {
   return (
       <SafeAreaView style={styles.page}>
@@ -33,22 +27,30 @@ const App: () => React$Node = () => {
             All Survey
           </Text>
         </View>
+        <View style = {styles.bodyScroll}>
+          <ScrollView>
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />
+          <SurveyItem />          
 
-        <ScrollView style ={styles.bodyScroll}>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
-        <Text style= {styles.highlight}>body content</Text>
+          </ScrollView>
 
-        </ScrollView>
+
+        </View>
       </SafeAreaView>
   );
 };
@@ -65,13 +67,8 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:Colors.white,
   },
-  bodyContent:{
-    flex:10,
-    backgroundColor: Colors.white,
-    
-  },
   bodyScroll:{
-    flex:1,
+    flex:8,
     backgroundColor: `#d2691e`,
   },
   sectionHeader: {
@@ -89,10 +86,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
     color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-    fontSize: 40,
   },
 });
 

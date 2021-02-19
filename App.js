@@ -27,30 +27,18 @@ const App: () => React$Node = () => {
             All Survey
           </Text>
         </View>
-        <View style = {styles.bodyScroll}>
-          <ScrollView>
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />
-          <SurveyItem />          
 
+        <View style = {styles.scrollContainer}>
+          <ScrollView style = {styles.scrollViewContainer}>
+            <View style = {styles.scrollView}>
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+            </View>
           </ScrollView>
-
-
         </View>
+
       </SafeAreaView>
   );
 };
@@ -63,13 +51,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#191970',
   },
-  body:{
-    flex:1,
-    backgroundColor:Colors.white,
-  },
-  bodyScroll:{
+  scrollContainer: {
     flex:8,
-    backgroundColor: `#d2691e`,
+    backgroundColor:'#ffffff',
+  },
+  scrollViewContainer:{
+    flex:1,
+    // backgroundColor:'#000000',
+  },
+  scrollView:{
+    flex:1,
+    flexDirection: 'column',
+    //flexGrow: 4,
+    // justifyContent: 'space-evenly',
+    backgroundColor:'#0000ff'
+
   },
   sectionHeader: {
     flex:1,

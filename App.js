@@ -35,6 +35,15 @@ const App: () => React$Node = () => {
               <SurveyItem />
               <SurveyItem />
               <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
+              <SurveyItem />
             </View>
           </ScrollView>
         </View>
@@ -44,9 +53,6 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
-  view: {
-    flex:1,
-  },
   page: {
     flex: 1,
     backgroundColor: '#191970',
@@ -54,17 +60,29 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flex:8,
     backgroundColor:'#ffffff',
+    borderWidth:4,
+    borderColor: '#191970',
+    
   },
   scrollViewContainer:{
     flex:1,
-    // backgroundColor:'#000000',
+  
+    // borderTopLeftRadius:20,
+    // borderTopLeftRadius:20,
+
+     backgroundColor:'#191970',
   },
   scrollView:{
     flex:1,
     flexDirection: 'column',
-    //flexGrow: 4,
-    // justifyContent: 'space-evenly',
-    backgroundColor:'#0000ff'
+    borderWidth:4,
+    borderColor:'#fff',
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    backgroundColor:'#f5f5f5',
+
 
   },
   sectionHeader: {

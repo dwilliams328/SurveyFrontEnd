@@ -8,7 +8,7 @@ const StyledButton = (prop) => {
             <Pressable 
             style={styles.button}
             onPress ={ () => {
-                console.warn("button Pressed!!")
+                console.log("button Pressed!!")
             }}>
                 <Text style = {styles.highlight}> This is a button</Text>
             </Pressable>

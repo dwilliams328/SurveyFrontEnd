@@ -10,9 +10,6 @@ import 'react-native-gesture-handler';
 import SurveyItem from '../SurveyItem';
 import styles from './styles';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
 const AllSurvey = () => {
     return(
     <SafeAreaView style={styles.page}>

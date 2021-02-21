@@ -9,11 +9,7 @@ import {
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 import SurveyItem from './components/SurveyItem';
@@ -62,14 +58,9 @@ const styles = StyleSheet.create({
     backgroundColor:'#ffffff',
     borderWidth:4,
     borderColor: '#191970',
-    
   },
   scrollViewContainer:{
     flex:1,
-  
-    // borderTopLeftRadius:20,
-    // borderTopLeftRadius:20,
-
      backgroundColor:'#191970',
   },
   scrollView:{
@@ -82,8 +73,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     backgroundColor:'#f5f5f5',
-
-
   },
   sectionHeader: {
     flex:1,
@@ -93,13 +82,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 32,
     fontWeight: '600',
-    color: Colors.white,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+    color: '#ffffff',
   },
 });
 

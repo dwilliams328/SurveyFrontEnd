@@ -1,89 +1,20 @@
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import AllSurvey from './components/AllSurvey';
 
-import SurveyItem from './components/SurveyItem';
+const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-      <SafeAreaView style={styles.page}>
-
-        <View style = {styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>
-            All Survey
-          </Text>
-        </View>
-
-        <View style = {styles.scrollContainer}>
-          <ScrollView style = {styles.scrollViewContainer}>
-            <View style = {styles.scrollView}>
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-              <SurveyItem />
-            </View>
-          </ScrollView>
-        </View>
-
-      </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name = 'AllSurvey' component = {AllSurvey}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    backgroundColor: '#191970',
-  },
-  scrollContainer: {
-    flex:8,
-    backgroundColor:'#ffffff',
-    borderWidth:4,
-    borderColor: '#191970',
-  },
-  scrollViewContainer:{
-    flex:1,
-     backgroundColor:'#191970',
-  },
-  scrollView:{
-    flex:1,
-    flexDirection: 'column',
-    borderWidth:4,
-    borderColor:'#fff',
-    borderTopLeftRadius:20,
-    borderTopRightRadius:20,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    backgroundColor:'#f5f5f5',
-  },
-  sectionHeader: {
-    flex:1,
-    marginTop: 30,
-    paddingHorizontal: 14,
-  },
-  sectionTitle: {
-    fontSize: 32,
-    fontWeight: '600',
-    color: '#ffffff',
-  },
-});
 
 export default App;
